@@ -1,0 +1,98 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  /* background-color: aqua; */
+}
+
+.container_produits {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+  /* width: 100%; */
+  margin-left: 200px;
+  margin-right: 200px;
+}
+
+.div_produits {
+  display: flex;
+  flex-direction: column;
+  height: 80px;
+  width: 100%;
+  background-color: burlywood;
+  align-items: center;
+  justify-content: center;
+  font-family: poppins;
+  font-size: 16px;
+  padding: 10px;
+  box-shadow: 1px 5px 10px -4px inset black;
+  color: rgb(3, 18, 60);
+}
+
+.order_cards{
+  margin: auto;
+  width: 400px;
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 200px;
+  border: solid 1px grey;
+  box-shadow: 1px 5px 10px -4px inset black;
+}
+
+h2 {
+  font-family: poppins;
+  font-size: 16px;
+  color: black;
+}
+
+.qte_produits {
+  box-shadow: 1px 2px 5px -3px inset;
+  height: 50px;
+  text-align: center;
+}
+
+.span_moins {
+  background-color: beige;
+  height: 50px;
+  width: 50px;
+  box-shadow: 1px 5px 10px -4px inset black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: poppins;
+  font-weight: 700;
+}
+
+.span_plus {
+  background-color: beige;
+  height: 50px;
+  width: 50px;
+  box-shadow: 1px 5px 10px -4px inset black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: poppins;
+  font-weight: 700;
+}
+
+.product_order_txt{
+     margin: auto;
+  width: 400px;
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 200px;
+  border: solid 1px grey;
+  box-shadow: 1px 5px 10px -4px inset black;
+  font-family: poppins;
+}
+
+.container_ordered{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
