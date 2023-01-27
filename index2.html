@@ -18,16 +18,12 @@
 
 <body>
 	<div id="app">
+		<div class="container">
 		<div class="container_produits">
 			<div v-for="produits in array" class="div_produits" v-on:click="order(produits)">{{produits}}</div>
 		</div>
-
-		<!-- <div class = "order_cards">
-			<h2 v-for = "product in panier" class="choixPanier">Votre choix: {{ product }} </h2>
-			<span class="span_moins">-</span><button class="qte_produits">Quantité</button><span class="span_plus" >+</span>
-		</div> -->
-			
-		<product_ordered v-for = "product in panier" v-bind:nom ="product" key="index"></product_ordered>
+		<product_ordered v-for = "product in panier" v-bind:nom ="product" key="index" v-on:balance="sugar_option"></product_ordered>
+		</div>
 
 	</div>
 
