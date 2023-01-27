@@ -22,10 +22,13 @@
 		<div class="container_produits">
 			<div v-for="produits in array" class="div_produits" v-on:click="order(produits)">{{produits}}</div>
 		</div>
-		<product_ordered v-for = "product in panier" v-bind:nom ="product" key="index" v-on:balance="sugar_option"></product_ordered>
+		<product_ordered v-for = "product in panier" v-bind:nom ="product" key="index" v-on:go="sugar_option"></product_ordered>
+		<!-- <sugar_selection v-on:bam = "sugar_select"></sugar_selection> -->
+		
 		</div>
-
+		
 	</div>
+		
 
 
 
