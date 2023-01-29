@@ -22,11 +22,12 @@
 		<div class="container_produits">
 			<div v-for="produits in array" class="div_produits" v-on:click="order(produits)">{{produits}}</div>
 		</div>
+		<div class="container_ordered_html">
 		<product_ordered v-for = "product in panier" v-bind:nom ="product" key="index" v-on:go="sugar_option"></product_ordered>
-		<!-- <sugar_selection v-on:bam = "sugar_select"></sugar_selection> -->
-		
+		<input type="range" v-if ="isDisplay" class="range_sugar" min="0" max="100" step="1" name="préférence de sucre" v-model="value">
+		<span  v-if ="isDisplay" class = "sugar_value">{{ value }} %</span>
 		</div>
-		
+		</div>
 	</div>
 		
 
