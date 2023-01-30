@@ -19,20 +19,23 @@
     <div id="app">
       <div class="container">
         <div class="container_produits">
-          <button :disabled="disabled" v-on:click="order(produits); disabled = !disabled" v-for="produits in array" class="div_produits">{{produits}}</button>
+          <button :disabled="disabled" v-on:click="order(produits); disabled = !disabled; displayOptionConfirmation()" v-for="produits in array" class="div_produits">{{produits}}</button>
         </div>
+
         <div class="container_ordered_html">
-          <product_ordered v-for="product in panier"  v-bind:nom="product" key="index" v-on:go="sugar_option"></product_ordered>
-          <input type="range" v-if="isDisplay" class="range_sugar" min="0" max="100" step="1" name="préférence de sucre" v-model="value" />
+          <product_ordered v-for="product in panier" v-bind:nom="product" key="index" v-on:go="displayOptionSugar"></product_ordered>
+          <input type="range" v-if="isDisplay" class="range_sugar" min="0" max="100" step="1" name="préférence de sucre" v-model="value" v-on:change="displayOptionConfirmation" />
           <span v-if="isDisplay" class="sugar_value">{{ value }} %</span>
         </div>
-	</div>
+
+        <div class="confirm_cancel" v-if="isDisplay2">
+          <button class="Confirm_Cancel">Commander</button>
+          <button v-on:click="reloadPage" class="Confirm_Cancel">Annuler</button>
+        </div>
+      </div>
     </div>
-	
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <script src="index.js"></script>
   </body>
 </html>
-
-

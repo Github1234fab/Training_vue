@@ -21,22 +21,28 @@ var app = new Vue({
     array: ["Espresso", "Double Espresso", "Cappuccino", "Américain", "Allongé", "Ristretto", "Thé", "Infusion", "Chocolat chaud"],
     panier: [],
     isDisplay: false,
+    isDisplay2: false,
     value: 0,
     percentage: "%",
-    countClick: 0,
-    disabled: false
+    disabled: false,
   },
 
   methods: {
     order: function (produits) {
       console.log(produits);
       this.panier.push(produits);
-      app.countClick += 1;
     },
-    sugar_option: function () {
+    displayOptionSugar: function () {
       console.log("ok");
       this.isDisplay = true;
     },
+    displayOptionConfirmation: function () {
+      console.log("ok");
+      this.isDisplay2 = true;
+    },
+    reloadPage: function () {
+      window.location.reload();
+    }
   },
 });
 
