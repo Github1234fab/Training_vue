@@ -64,7 +64,7 @@
   width: 100%;
 }
 .sugar_button {
-  background-color: white;
+ background-color: white;
   border: none;
   color: white;
   font-family: poppins;
@@ -73,6 +73,11 @@
   width: 90px;
   border-radius: 5px;
   background: linear-gradient(167deg, rgba(130, 129, 139, 1) 0%, rgba(17, 16, 16, 1) 100%);
+}
+
+.sugar_button:hover {
+  transform: scale(0.9);
+    box-shadow: 1px 2px 7px -1px black inset;
 }
 
 .container_ordered_html {
@@ -86,7 +91,7 @@
 .range_sugar {
   width: 400px;
   height: 15px;
-appearance: none;
+  appearance: none;
   background: rgb(35, 28, 28);
   outline: none;
   border-radius: 15px;
