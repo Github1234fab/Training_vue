@@ -22,7 +22,7 @@
   margin-right: 100px;
   margin-left: 100px;
   margin-top: 30px;
-  height: 300px;
+  height: 100px;
 }
 
 .div_produits {
@@ -49,7 +49,7 @@
   align-items: center;
   justify-content: center;
   width: 400px;
-  height: 200px;
+  height: 300px;
   gap: 10px;
   box-shadow: 1px 5px 10px -4px black;
 }
@@ -83,7 +83,7 @@
 }
 
 .container_ordered_html {
-  height: 800px;
+  height: 200px;
   width: 400px;
   display: flex;
   flex-direction: column;
@@ -116,4 +116,19 @@
 
 .confirm_cancel{
   font-family: poppins;
+  background-color: #2e0c95;
+  height: 100px;
+  width: 200px;
+}
+
+h2{
+  font-family: poppins;
+
+}
+
+
+.orderBoard{
+background-color:rgb(35, 28, 28);
+height: 200px;
+color: white;
 }

@@ -16,22 +16,28 @@
   </head>
 
   <body>
+
     <div id="app">
       <div class="container">
         <div class="container_produits">
-          <button :disabled="disabled" v-on:click="order(produits); disabled = !disabled; displayOptionConfirmation()" v-for="produits in array" class="div_produits">{{produits}}</button>
+          <button :disabled="disabled" v-on:click="order(produits); disabled = !disabled " v-for="produits in array" class="div_produits">{{produits}}</button>
         </div>
 
         <div class="container_ordered_html">
-          <product_ordered v-for="product in panier" v-bind:nom="product" key="index" v-on:go="displayOptionSugar"></product_ordered>
-          <input type="range" v-if="isDisplay" class="range_sugar" min="0" max="100" step="1" name="préférence de sucre" v-model="value" v-on:change="displayOptionConfirmation" />
+          <product_ordered v-for="product in panier" v-bind:nom="product" key="index"  v-on:go="displayOptionSugar"></product_ordered>
+          <input type="range"   v-show="isDisplay" class="range_sugar" min="0" max="100" step="1" name="préférence de sucre"  v-model="value" v-on:change="displayOptionConfirmation" />
           <span v-if="isDisplay" class="sugar_value">{{ value }} %</span>
         </div>
 
-        <div class="confirm_cancel" v-if="isDisplay2">
-          <button class="Confirm_Cancel">Commander</button>
-          <button v-on:click="reloadPage" class="Confirm_Cancel">Annuler</button>
+        <div class="confirm_cancel" v-show="isDisplay2">
+			<button v-on:click = "goOrder();  displayOrderBoard()">Commandez</button>
+			<button v-on:click ="reloadPage">Annuler la commande</button>
         </div>
+
+		<div class="orderBoard" v-show=" isDisplay3">
+<h2>Merci de patienter, votre commande sera prête dans 30 secondes!</h2>
+</div>
+
       </div>
     </div>
 
