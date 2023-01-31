@@ -24,7 +24,7 @@
         </div>
 
         <div class="container_ordered_html">
-          <product_ordered v-for="product in panier" v-bind:nom="product" key="index"  v-on:go="displayOptionSugar"></product_ordered>
+          <product_ordered v-for="product in panier" v-bind:nom="product" key="index"  v-on:go="displayOptionSugar" v-on:go-board="displayOptionConfirmation"></product_ordered>
           <input type="range"   v-show="isDisplay" class="range_sugar" min="0" max="100" step="1" name="préférence de sucre"  v-model="value" v-on:change="displayOptionConfirmation" />
           <span v-if="isDisplay" class="sugar_value">{{ value }} %</span>
         </div>

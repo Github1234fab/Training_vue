@@ -4,17 +4,23 @@ Vue.component("product_ordered", {
             <p class="product_order_txt">Votre choix: {{ nom }}</p>
         <div class="container_sucre">
             <button v-on:click ="sucrer()" class="sugar_button">Sucré</button>
-            <button v-on:click ="displayOrderBoardNoSugar()" class="sugar_button">Non sucré</button>
+            <button class="sugar_button" v-on:click= "sucro()">Non Sucré</button>
              </div>
         </div>`,
   props: ["nom"],
+  data: function () {
+    return {
+      isDisplay2: false,
+    };
+  },
   methods: {
     sucrer: function () {
       this.$emit("go");
     },
-    displayOrderBoardNoSugar: function () {
-displayOrderBoard
-    }
+    sucro: function () {
+      this.$emit("go-board");
+      console.log("board");
+    },
   },
 });
 
@@ -48,7 +54,6 @@ var app = new Vue({
       console.log("ok");
       this.isDisplay3 = true;
     },
-
     reloadPage: function () {
       window.location.reload();
     },
