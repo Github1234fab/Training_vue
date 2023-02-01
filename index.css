@@ -4,7 +4,6 @@
   box-sizing: border-box;
   /* background-color: aqua; */
 }
-
 .container {
   display: flex;
   flex-direction: column;
@@ -13,7 +12,6 @@
   gap: 20px;
   margin: auto;
 }
-
 .container_produits {
   display: flex;
   justify-content: space-evenly;
@@ -24,7 +22,6 @@
   margin-top: 30px;
   height: 100px;
 }
-
 .div_produits {
   border: none;
   display: flex;
@@ -38,50 +35,49 @@
   color: rgb(3, 18, 60);
   border-radius: 10px 10px 0px 0px;
 }
-
 .product_order_txt {
   font-family: poppins;
+  color: v-bind(color);
 }
-
 .container_ordered {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 400px;
-  height: 300px;
+  height: 400px;
   gap: 10px;
-  box-shadow: 1px 5px 10px -4px black;
+  box-shadow: 1px 1px 10px -2px grey;
+  border-radius: 5px;
+  /* border: solid grey 5px; */
 }
-
 .ordered_txt {
   font-size: 14px;
   font-family: poppins;
 }
-
 .container_sucre {
   display: flex;
   justify-content: space-around;
   align-items: center;
   width: 100%;
+  height: 100px;
 }
 .sugar_button {
- background-color: white;
+  background-color: white;
   border: none;
   color: white;
   font-family: poppins;
   box-shadow: 1px 2px 7px -1px black;
   height: 70px;
-  width: 90px;
+  width: 100px;
   border-radius: 5px;
   background: linear-gradient(167deg, rgba(130, 129, 139, 1) 0%, rgba(17, 16, 16, 1) 100%);
+  transition: transform 0.7s;
 }
-
 .sugar_button:hover {
   transform: scale(0.9);
-    box-shadow: 1px 2px 7px -1px black inset;
+  box-shadow: 1px 2px 7px -1px black inset;
 }
-
 .container_ordered_html {
   height: 200px;
   width: 400px;
@@ -89,46 +85,84 @@
   flex-direction: column;
   align-items: center;
 }
-
 .range_sugar {
+  margin-top: 20px;
   width: 400px;
-  height: 15px;
+  height: 60px;
   appearance: none;
-  background: rgb(35, 28, 28);
+  background: rgb(255, 255, 255);
   outline: none;
-  border-radius: 15px;
+  border-radius: 5px;
   overflow: hidden;
-  box-shadow: inset 0 0 5px rgba(0, 0, 0, 1);
+  box-shadow: 1px 1px 5px 2px grey inset;
+  border: none;
 }
 .range::-webkit-slider-thumb {
   -webkit-appearance: none;
-  width: 15px;
+  width: 25px;
   height: 15px;
   border-radius: 50%;
-  background: #526a53;
+  background: #d6e2d7;
   cursor: pointer;
-  border: 4px solid rgb(162, 8, 8);
-  box-shadow: -407px 0 0 400px #2e0c95;
+  border: 4px solid rgb(255, 255, 255);
+  box-shadow: -407px 0 0 400px #a99ad6;
 }
 .sugar_value {
+  margin-top: 10px;
   font-family: poppins;
-}
-
-.confirm_cancel{
-  font-family: poppins;
-  background-color: #2e0c95;
-  height: 100px;
-  width: 200px;
-}
-
-h2{
-  font-family: poppins;
+  font-weight: 600;
 
 }
-
-
-.orderBoard{
-background-color:rgb(35, 28, 28);
-height: 200px;
-color: white;
+.confirm_cancel {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: poppins;
+  font-size: 16px;
+  font-weight: 500;
+  width: 400px;
+  height: 200px;
+  gap: 10px;
+  box-shadow: 1px 1px 10px -2px grey;
+}
+.button_confirm {
+  border: none;
+  color: white;
+  font-family: poppins;
+  box-shadow: 1px 2px 7px -1px black;
+  height: 70px;
+  width: 150px;
+  border-radius: 5px;
+  background: linear-gradient(167deg, rgb(54, 133, 8) 0%, rgb(179, 209, 14) 100%);
+  transition: transform 0.7s;
+}
+.button_confirm:hover {
+  transform: scale(0.9);
+  box-shadow: 1px 2px 7px -1px black inset;
+}
+.button_cancel {
+  background-color: rgb(242, 52, 52);
+  border: none;
+  color: rgb(255, 255, 255);
+  font-family: poppins;
+  box-shadow: 1px 2px 7px -1px black;
+  height: 70px;
+  width: 150px;
+  border-radius: 5px;
+  background: linear-gradient(167deg, rgb(140, 29, 6) 0%, rgb(239, 55, 55) 100%);
+  transition: transform 0.7s;
+}
+.button_cancel:hover {
+  transform: scale(0.9);
+  box-shadow: 1px 2px 7px -1px black inset;
+}
+.orderBoard {
+  font-family: poppins;
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  text-align: center;
+  width: 400px;
+  gap: 10px;
+  box-shadow: 1px 5px 10px -4px black;
 }

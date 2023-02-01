@@ -1,23 +1,17 @@
 Vue.component("product_ordered", {
-  template: `
-        <div class = "container_ordered">
+  template: `<div class = "container_ordered">
             <p class="product_order_txt">Votre choix: {{ nom }}</p>
         <div class="container_sucre">
-            <button v-on:click ="sucrer()" class="sugar_button">Sucré</button>
-            <button class="sugar_button" v-on:click= "sucro()">Non Sucré</button>
+            <button v-on:click ="sugarOption()" class="sugar_button">Sucré</button>
+            <button class="sugar_button" v-on:click= "orderDirectly()">Non Sucré</button>
              </div>
         </div>`,
   props: ["nom"],
-  data: function () {
-    return {
-      isDisplay2: false,
-    };
-  },
   methods: {
-    sucrer: function () {
+    sugarOption: function () {
       this.$emit("go");
     },
-    sucro: function () {
+    orderDirectly: function () {
       this.$emit("go-board");
       console.log("board");
     },
