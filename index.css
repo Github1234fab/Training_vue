@@ -22,8 +22,9 @@
   margin-left: 100px;
   margin-top: 30px;
   height: 100px;
+  width: 800px;
 }
-.div_produits {
+.buttons_produits {
   border: none;
   display: flex;
   background-color: burlywood;
@@ -35,6 +36,10 @@
   box-shadow: 1px 5px 10px -4px inset black;
   color: rgb(3, 18, 60);
   border-radius: 10px 10px 0px 0px;
+  transition: transform .650s
+}
+.buttons_produits:hover {
+  transform: scale(0.9);
 }
 .product_order_txt {
   font-family: poppins;
@@ -104,10 +109,10 @@
   width: 100px;
   border-radius: 5px;
   background: linear-gradient(167deg, rgba(130, 129, 139, 1) 0%, rgba(17, 16, 16, 1) 100%);
-  transition: transform 0.7s;
+  transition: width 0.7s;
 }
 .sugar_button:hover {
-  transform: scale(0.9);
+width: 97px;
   box-shadow: 1px 2px 7px -1px black inset;
 }
 .confirm_cancel {
@@ -131,14 +136,13 @@
   width: 150px;
   border-radius: 5px;
   background: linear-gradient(167deg, rgb(54, 133, 8) 0%, rgb(179, 209, 14) 100%);
-  transition: transform 0.7s;
+ transition: width 0.7s;
 }
 .button_confirm:hover {
-  transform: scale(0.9);
+  width: 147px;
   box-shadow: 1px 2px 7px -1px black inset;
 }
 .button_cancel {
-  background-color: rgb(242, 52, 52);
   border: none;
   color: rgb(255, 255, 255);
   font-family: poppins;
@@ -147,10 +151,11 @@
   width: 150px;
   border-radius: 5px;
   background: linear-gradient(167deg, rgb(140, 29, 6) 0%, rgb(239, 55, 55) 100%);
-  transition: transform 0.7s;
+  transition: width 0.7s;
 }
 .button_cancel:hover {
-  transform: scale(0.9);
+  /* transform: scale(0.9); */
+  width: 147px;
   box-shadow: 1px 2px 7px -1px black inset;
 }
 .orderBoard {
@@ -162,4 +167,6 @@
   width: 400px;
   gap: 10px;
   box-shadow: 1px 5px 10px -4px black;
+  padding: 20px;
+  align-items: center;
 }
